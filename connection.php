@@ -1,7 +1,7 @@
 <?php
 $host = '192.168.1.74'; // IP XAMPP
-$dbname = 'kampus';
-$username = 'kampus';
+$dbname = 'kampususer';
+$username = 'kampususer';
 $password = '12345';
 
 try {
