@@ -13,24 +13,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header("Location: index.php");
 }
 ?>
-
+<!DOCTYPE html>
 <html>
-
 <head>
-    <title>Data Mahasiswa</title>
+    <title>Tambah Data Mahasiswa</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <h2>Tambah Mahasiswa</h2>
+        <a href="index.php" class="add-link">Batal & Kembali</a>
 
-<h2>Tambah Mahasiswa</h2>
-
-<form method="POST">
-    NPM: <input type="text" name="nim"><br><br>
-    Nama: <input type="text" name="nama"><br><br>
-    Jurusan: <input type="text" name="jurusan"><br><br>
-    <button type="submit">Simpan</button>
-</form>
-
+        <form method="POST">
+            <label>NPM</label>
+            <input type="text" name="nim" placeholder="Masukkan NPM..." required>
+            
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" placeholder="Masukkan Nama..." required>
+            
+            <label>Jurusan</label>
+            <input type="text" name="jurusan" placeholder="Masukkan Jurusan..." required>
+            
+            <button type="submit">Simpan Data</button>
+        </form>
+    </div>
 </body>
 </html>

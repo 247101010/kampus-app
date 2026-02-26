@@ -17,7 +17,7 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="container">
         <h2>Daftar Mahasiswa</h2>
-        <a href="tambah.php" class="add-link">Tambah Data</a>
+        <a href="tambah.php" class="add-link primary">+ Tambah Data Mahasiswa</a>
         <br><br>
 
         <table>
