@@ -14,6 +14,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
+<html>
+
+<head>
+    <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <h2>Tambah Mahasiswa</h2>
 
 <form method="POST">
@@ -22,3 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     Jurusan: <input type="text" name="jurusan"><br><br>
     <button type="submit">Simpan</button>
 </form>
+
+</body>
+</html>

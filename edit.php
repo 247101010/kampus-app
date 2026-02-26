@@ -19,9 +19,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
+<html>
+
+<head>
+    <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Edit Mahasiswa</h2>
+        <a href="index.php" class="add-link">Kembali</a>
+        <br><br>
+
+
 <form method="POST">
     NPM: <input type="text" name="nim" value="<?= $data['nim'] ?>"><br><br>
     Nama: <input type="text" name="nama" value="<?= $data['nama'] ?>"><br><br>
     Jurusan: <input type="text" name="jurusan" value="<?= $data['jurusan'] ?>"><br><br>
     <button type="submit">Update</button>
 </form>
+    </div>
+    </body>
+    </html>
