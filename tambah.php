@@ -2,11 +2,11 @@
 require 'connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $npm = $_POST['npm'];
+    $npm = $_POST['nim'];
     $nama = $_POST['nama'];
     $jurusan = $_POST['jurusan'];
 
-    $sql = "INSERT INTO mahasiswa (npm, nama, jurusan) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO mahasiswa (nim, nama, jurusan) VALUES (?, ?, ?)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$npm, $nama, $jurusan]);
 
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <h2>Tambah Mahasiswa</h2>
 
 <form method="POST">
-    NPM: <input type="text" name="npm"><br><br>
+    NPM: <input type="text" name="nim"><br><br>
     Nama: <input type="text" name="nama"><br><br>
     Jurusan: <input type="text" name="jurusan"><br><br>
     <button type="submit">Simpan</button>

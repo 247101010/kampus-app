@@ -7,11 +7,11 @@ $stmt->execute([$id]);
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $npm = $_POST['npm'];
+    $npm = $_POST['nim'];
     $nama = $_POST['nama'];
     $jurusan = $_POST['jurusan'];
 
-    $sql = "UPDATE mahasiswa SET npm=?, nama=?, jurusan=? WHERE id=?";
+    $sql = "UPDATE mahasiswa SET nim=?, nama=?, jurusan=? WHERE id=?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$npm, $nama, $jurusan, $id]);
 
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <form method="POST">
-    NPM: <input type="text" name="npm" value="<?= $data['npm'] ?>"><br><br>
+    NPM: <input type="text" name="nim" value="<?= $data['nim'] ?>"><br><br>
     Nama: <input type="text" name="nama" value="<?= $data['nama'] ?>"><br><br>
     Jurusan: <input type="text" name="jurusan" value="<?= $data['jurusan'] ?>"><br><br>
     <button type="submit">Update</button>

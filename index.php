@@ -32,7 +32,7 @@ $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach ($data as $row): ?>
                 <tr>
                     <td><?= $no++ ?></td>
-                    <td><?= htmlspecialchars($row['npm']) ?></td>
+                    <td><?= htmlspecialchars($row['nim']) ?></td>
                     <td><?= htmlspecialchars($row['nama']) ?></td>
                     <td><?= htmlspecialchars($row['jurusan']) ?></td>
                     <td>
